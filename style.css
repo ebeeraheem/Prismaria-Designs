@@ -295,7 +295,7 @@ hr {
   justify-content: space-around;
   text-align: center;
   background-image: url(./images/scale.svg),
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(8, 28, 21, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
     url(./images/cta-background-image.png);
   background-position: bottom, center;
   background-size: auto, cover;
@@ -304,13 +304,46 @@ hr {
 .cta p {
   color: var(--light);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 200;
   max-width: 75%;
   line-height: 1.4;
 }
 .cta a {
   color: var(--light);
   border-color: var(--light);
+}
+
+/* ********************************** */
+/* BLOGS SECTION */
+.blogs {
+  padding: 80px 20px;
+}
+.blogs .blog-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 40px;
+}
+.blogs .blog div {
+  overflow: hidden;
+  /* margin-bottom: 10px; */
+}
+.blogs .blog div img {
+  display: block;
+  width: 100%;
+  transition: all 500ms ease-out;
+}
+.blogs .blog:hover div img {
+  transform: scale(1.1);
+}
+.blogs .blog p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding-block: 15px;
+}
+.blogs .blog h3 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -379,10 +412,11 @@ hr {
   /* CTA SECTION */
   .cta {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .cta p {
     text-align: left;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    max-width: 65%;
   }
 }
