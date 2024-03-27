@@ -166,15 +166,18 @@ header .main-nav a:hover {
   color: var(--dark);
   margin-bottom: 40px;
 }
-.hero-section .hero-left a {
+/* CTA section button is here as well */
+.hero-section .hero-left a,
+.cta a {
   color: var(--dark);
   text-decoration: none;
   padding: 10px 25px;
   border: 1px solid var(--green);
   border-radius: 20px;
-  transition: color 700ms ease;
+  transition: background-color 700ms ease;
 }
-.hero-section .hero-left a:hover {
+.hero-section .hero-left a:hover,
+.cta a:hover {
   color: var(--light);
   background-color: var(--green);
 }
@@ -281,6 +284,35 @@ hr {
   line-height: 1.4;
 }
 
+/* ********************************** */
+/* CTA SECTION */
+.cta {
+  height: 60vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background-image: url(./images/scale.svg),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(8, 28, 21, 0.8)),
+    url(./images/cta-background-image.png);
+  background-position: bottom, center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+}
+.cta p {
+  color: var(--light);
+  font-size: 1.3rem;
+  font-weight: 400;
+  max-width: 75%;
+  line-height: 1.4;
+}
+.cta a {
+  color: var(--light);
+  border-color: var(--light);
+}
+
 @media (min-width: 768px) {
   header .checkbox,
   header .hamburger-lines {
@@ -342,5 +374,15 @@ hr {
   }
   .stats h3 {
     font-size: 4rem;
+  }
+
+  /* CTA SECTION */
+  .cta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .cta p {
+    text-align: left;
+    font-size: 2rem;
   }
 }
