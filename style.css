@@ -320,13 +320,13 @@ hr {
 }
 .blogs .blog-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 15px;
+  row-gap: 55px;
   margin-top: 40px;
 }
 .blogs .blog div {
   overflow: hidden;
-  /* margin-bottom: 10px; */
 }
 .blogs .blog div img {
   display: block;
@@ -339,7 +339,7 @@ hr {
 .blogs .blog p {
   font-size: 0.9rem;
   line-height: 1.4;
-  padding-block: 15px;
+  padding-block: 10px;
 }
 .blogs .blog h3 {
   font-size: 1rem;
@@ -418,5 +418,11 @@ hr {
     text-align: left;
     font-size: 2.5rem;
     max-width: 65%;
+  }
+
+  /* BLOGS SECTION */
+  .blogs .blog-wrapper {
+    flex-direction: row;
+    column-gap: 15px;
   }
 }
