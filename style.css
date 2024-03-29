@@ -169,7 +169,8 @@ header .main-nav a:hover {
 /* CTA section button is here as well */
 .hero-section .hero-left a,
 .cta a,
-.newsletter .newsletter-left button {
+.newsletter .newsletter-left button,
+footer .footer-left a {
   color: var(--dark);
   text-decoration: none;
   padding: 10px 25px;
@@ -179,7 +180,8 @@ header .main-nav a:hover {
 }
 .hero-section .hero-left a:hover,
 .cta a:hover,
-.newsletter .newsletter-left button:hover {
+.newsletter .newsletter-left button:hover,
+footer .footer-left a:hover {
   color: var(--light);
   background-color: var(--green);
 }
@@ -401,6 +403,55 @@ hr {
   display: none;
 }
 
+/* ********************************** */
+/* FOOTER SECTION */
+footer {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  position: relative;
+}
+footer .footer-left p {
+  padding-block: 40px;
+  font-size: 1.2rem;
+}
+footer .footer-right {
+  /* width: 35%; */
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  column-gap: 30px;
+  font-size: 90%;
+}
+footer .footer-right div ul {
+  list-style: none;
+}
+footer .footer-right div ul li {
+  line-height: 2;
+}
+footer .footer-right div ul li a {
+  color: var(--dark);
+}
+footer .footer-right div ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .credits {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+footer .credits a {
+  color: var(--gray);
+}
+footer .credits a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   header .checkbox,
   header .hamburger-lines {
@@ -496,5 +547,20 @@ hr {
   .newsletter .newsletter-righ img {
     display: block;
     max-width: 100%;
+  }
+
+  /* FOOTER SECTION */
+  footer {
+    flex-direction: row;
+  }
+  footer .footer-left {
+    width: 65%;
+  }
+  footer .footer-left p {
+    max-width: 50%;
+  }
+  footer .footer-right {
+    width: 50%;
+    justify-content: space-evenly;
   }
 }
