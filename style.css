@@ -12,6 +12,8 @@
   --gray: #6c757d;
   --light: #f8f9fa;
   --green: #081c15;
+
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -50,6 +52,17 @@ header {
   height: 70px;
 }
 
+#logo h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--green);
+}
+#logo span {
+  letter-spacing: 18px;
+  text-transform: uppercase;
+  color: var(--green);
+}
 /* Mobile menu styles */
 header .checkbox {
   position: absolute;
