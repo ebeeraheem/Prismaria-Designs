@@ -168,16 +168,18 @@ header .main-nav a:hover {
 }
 /* CTA section button is here as well */
 .hero-section .hero-left a,
-.cta a {
+.cta a,
+.newsletter .newsletter-left button {
   color: var(--dark);
   text-decoration: none;
   padding: 10px 25px;
   border: 1px solid var(--green);
   border-radius: 20px;
-  transition: background-color 700ms ease;
+  transition: background-color 300ms ease;
 }
 .hero-section .hero-left a:hover,
-.cta a:hover {
+.cta a:hover,
+.newsletter .newsletter-left button:hover {
   color: var(--light);
   background-color: var(--green);
 }
@@ -346,6 +348,59 @@ hr {
   font-weight: 600;
 }
 
+/* ********************************** */
+/* NEWSLETTER SECTION */
+.newsletter {
+  /* height: 80vh; */
+  padding: 130px 20px;
+  background-color: black;
+  background-image: url(./images/scale.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.newsletter .newsletter-left h3 {
+  color: var(--light);
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.newsletter .newsletter-left form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 450px;
+}
+.newsletter .newsletter-left #email {
+  font-family: Inter-VariableFont;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--light);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--light);
+  padding-block: 10px;
+  margin-bottom: 20px;
+}
+.newsletter .newsletter-left #email::placeholder {
+  color: var(--light);
+  font-family: Inter-VariableFont;
+  font-size: 1rem;
+  opacity: 1;
+}
+.newsletter .newsletter-left button {
+  font-family: Inter-VariableFont;
+  font-size: 1rem;
+  color: var(--light);
+  background-color: transparent;
+  border: 1px solid var(--light);
+  cursor: pointer;
+  align-self: flex-end;
+}
+.newsletter .newsletter-right {
+  display: none;
+}
+
 @media (min-width: 768px) {
   header .checkbox,
   header .hamburger-lines {
@@ -424,5 +479,22 @@ hr {
   .blogs .blog-wrapper {
     flex-direction: row;
     column-gap: 15px;
+  }
+
+  /* NEWSLETTER SECTION */
+  .newsletter {
+    display: flex;
+    align-items: center;
+    padding-block: 0;
+    overflow: hidden;
+  }
+  .newsletter .newsletter-right {
+    display: block;
+    max-width: 35%;
+    max-height: 80vh;
+  }
+  .newsletter .newsletter-righ img {
+    display: block;
+    max-width: 100%;
   }
 }
